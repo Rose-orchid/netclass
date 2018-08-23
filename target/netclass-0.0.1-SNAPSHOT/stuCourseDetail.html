@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>课程详情</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/tea_global.css">
+    <link rel="stylesheet" href="css/left_global.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/cookie_util.js"></script>
+    <script type="text/javascript" src="js/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="js/basevalue.js"></script>
+    <script type="text/javascript" src="scripts/stu_course_detail.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#userName").html("欢迎您，" + getCookie("userId"));
+            loadCourse();
+            listFiles();
+            $("#files_ul").on("click", "li", download);
+        })
+    </script>
+    <style>
+        #content_ {
+            position: absolute;
+            left: 260px;
+            top: 60px;
+            width: 850px;
+            min-height: 800px;
+            background-color: white;
+        }
+
+        #span1 {
+            font-size: 24px;
+            position: relative;
+            top: 30px;
+            left: 110px;
+        }
+
+        #courseNotice {
+            position: relative;
+            left: 100px;
+            top: 50px;
+            width: 600px;
+            height: 150px;
+        }
+
+        #hr1 {
+            width: 80%;
+            position: relative;
+            top: 100px;
+            margin: 0 auto;
+        }
+
+        #span2 {
+            font-size: 24px;
+            position: relative;
+            top: 80px;
+            left: 110px;
+        }
+
+        #files_ul {
+            position: relative;
+            top: 150px;
+            left: 110px;
+            height: auto;
+        }
+
+        #files_ul li {
+            font-size: 16px;
+        }
+
+        #files_ul span {
+            position: absolute;
+            left: 400px;
+        }
+
+        .file:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #more {
+            position: relative;
+            top: 20px;
+            left: 650px;
+        }
+
+        #upload_ {
+            border: 2px solid #55B929;
+            width: 220px;
+            height: 120px;
+            background-color: white;
+            position: absolute;
+            right: 15px;
+            top: 100px;
+        }
+
+        #span3 {
+            font-size: 20px;
+            position: relative;
+            top: 5px;
+            left: 10px;
+        }
+
+        #file1 {
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        #upload_file {
+            position: relative;
+            top: 20px;
+            left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="top_">
+    <img id="top_logo" src="images/mooc.png">
+    <ul>
+        <li><a href="stuCourseDetail.html">首页</a></li>
+        <li><a href="stuCourseNotice.html">公告</a></li>
+        <li><a href="stuCourseForum.html">论坛</a></li>
+        <li><a href="stuCourseBoard.html">私信</a></li>
+        <li><a href="stuCourseWork.html">作业</a></li>
+    </ul>
+    <a id="userName">欢迎您，</a>
+    <a id="logout" href="login.html">退出</a>
+</div>
+
+<div id="body_">
+
+    <img id="book_img" class="img-rounded" src="images/book1.jpg">
+
+    <div id="course_info">
+        <div id="course_name">
+            <span id="courseName"></span>
+        </div>
+        <div id="teacher_name">
+            <p>授课教师:<span id="teacherName"></span></p>
+        </div>
+        <span id="courseIntro"></span>
+    </div>
+
+    <div id="content_">
+        <span id="span1">最新公告</span>
+        <span class="form-control" id="courseNotice"></span>
+        <div id="more"><a href="stuCourseNotice.html">More</a></div>
+        <span id="span2">课程资料</span>
+        <hr id="hr1">
+        <div id="files_ul">
+
+        </div>
+    </div>
+
+    <div id="upload_">
+        <span id="span3">提交作业</span>
+        <input type="file" name="file" id="file1">
+        <input type="button" id="upload_file" value="上传作业" onclick="upload();">
+    </div>
+
+</div>
+
+
+</body>
+</html>

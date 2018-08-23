@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>课程详情</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/tea_global.css">
+    <link rel="stylesheet" href="css/left_global.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/cookie_util.js"></script>
+    <script type="text/javascript" src="js/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="js/basevalue.js"></script>
+    <script type="text/javascript" src="scripts/stu_course_detail.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#userName").html("欢迎您，" + getCookie("userId"));
+            loadCourse();
+            loadMessage();
+            $("#sendMsgToTea").on("click", sendMsgToTea);
+        })
+    </script>
+    <style>
+
+        #head_ {
+            width: 850px;
+            min-height: 600px;
+            margin: 1px auto;
+            background-color: white;
+            position: absolute;
+            left: 260px;
+            top: 60px;
+        }
+
+        #span1 {
+            font-size: 27px;
+            position: relative;
+            top: 30px;
+            left: 40px;
+        }
+
+        #message_list {
+            position: relative;
+            top: 1px;
+            left: 30px;
+            height: 450px;
+            overflow: scroll;
+        }
+
+        .record {
+            border: 2px #eeeeee solid;
+            margin-top: 2px;
+            min-height: 100px;
+            width: 700px;
+            position: relative;
+            left: 40px;
+        }
+
+        #message_list #title {
+            background-color: #eeeeee;
+        }
+
+        #message_list #message {
+            min-height: 80px;
+        }
+
+        #message_list #time {
+            position: absolute;
+            top: 0px;
+            right: 10px;
+        }
+
+        #message_list button {
+            position: absolute;
+            top: 100px;
+            right: 30px;
+        }
+
+        #area1{
+            position: relative;
+            left: 70px;
+            top: 5px;
+            width: 700px;
+            height: 130px;
+        }
+
+        #sendMsgToTea{
+            position: absolute;
+            top: 90px;
+            right: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="top_">
+    <img id="top_logo" src="images/mooc.png">
+    <ul>
+        <li><a href="stuCourseDetail.html">首页</a></li>
+        <li><a href="stuCourseNotice.html">公告</a></li>
+        <li><a href="stuCourseForum.html">论坛</a></li>
+        <li><a href="stuCourseBoard.html">私信</a></li>
+        <li><a href="stuCourseWork.html">作业</a></li>
+    </ul>
+    <a id="userName">欢迎您，</a>
+    <a id="logout" href="login.html">退出</a>
+</div>
+
+<div id="body_">
+
+    <img id="book_img" class="img-rounded" src="images/book1.jpg">
+    <div id="course_info">
+        <div id="course_name">
+            <span id="courseName"></span>
+        </div>
+        <div id="teacher_name">
+            <p>授课教师:<span id="teacherName"></span></p>
+        </div>
+        <span id="courseIntro"></span>
+    </div>
+
+
+    <div id="head_">
+
+        <div id="message_list">
+
+        </div>
+
+
+        <div style="position: relative">
+            <textarea id="area1" class="form-control"></textarea>
+            <button id="sendMsgToTea" class="btn btn-primary">发送</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

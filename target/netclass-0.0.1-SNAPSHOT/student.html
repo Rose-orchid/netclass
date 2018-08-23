@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>学生登录</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/tea_global.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/cookie_util.js"></script>
+    <script type="text/javascript" src="js/basevalue.js"></script>
+    <script type="text/javascript" src="scripts/student.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#userName").html("欢迎您，" + getCookie("userId"));
+            var courseId = null;
+            var studentId = null;
+            listMyCourse();
+            $("#listMyCourse").click(listMyCourse);
+            $("#addMyCourse").click(listAllCourse);
+            //弹出个人信息页面
+            $("#my_info").click(alert_MyInfo);
+            $("#con").on("click", "#courseList_ul li", alertAddCourse);
+            $("#con").on("click", "#con_ul li", loadCourseDetail);
+            $("#alert_con").on("click", ".cancel,.close", closeAlertWindow);
+            $("#alert_con").on("click", "#sure_addCourse", sureAddCourse);
+        })
+    </script>
+    <style>
+        #left_ {
+            position: relative;
+            top: 100px;
+            left: 20px;
+            width: 200px;
+            min-height: 400px;
+        }
+
+        #left_ div {
+            background-color: #F8F8F8;
+            border: 1px #eeeeee solid;
+            width: 200px;
+            height: 50px;
+        }
+
+        #left_ a {
+            position: relative;
+            left: 20px;
+            height: 50px;
+            font-size: 25px;
+            line-height: 50px;
+        }
+
+        #left_ a:hover {
+            text-decoration: none;
+            cursor: default;
+            color: #96D013;
+        }
+
+        #con {
+            background-color: white;
+            position: absolute;
+            left: 250px;
+            top: 60px;
+            width: 900px;
+            height: auto;
+            min-height: 600px;
+        }
+
+        #con li {
+            display: inline-block;
+            height: 280px;
+            width: 240px;
+            margin: 20px 20px;
+            border: 1px #eeeeee solid;
+            position: relative;
+            background-color: #ffffff;
+        }
+
+        #con li:hover {
+            box-shadow: 5px 6px 5px #eeeeee;
+            cursor: pointer;
+        }
+
+        #con li img {
+            height: 180px;
+            width: 230px;
+        }
+
+        #con li p {
+            font-size: 20px;
+            position: relative;
+            top: 15px;
+            left: 20px;
+        }
+
+        #stuAlertAddCourse {
+            display: none;
+            border:2px #55B929 solid;
+            background-color:white;
+            height:auto;
+            width:400px;
+            position:fixed;
+            top:150px;
+            left:500px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="top_">
+    <img id="top_logo" src="images/mooc.png">
+    <a id="userName">欢迎您，</a>
+    <a id="logout" href="login.html">退出</a>
+</div>
+<div><span style="position:absolute;top:80px; left:40px;font-size: 38px;">学生系统</span></div>
+<div id="left_">
+    <div id="listMyCourse"><a>我的课程</a></div>
+    <div id="addMyCourse"><a>添加课程</a></div>
+    <div id="my_info"><a>个人中心</a></div>
+    <br>
+</div>
+
+<div id="con">
+
+</div>
+
+
+<div id="alert_con">
+
+    <div id="stuAlertAddCourse">
+        <div style="height:40px;background-color:#55B929;">
+            <button style="" type="button" class="close">×</button>
+            <span style="font-size: 24px;">添加课程</span>
+        </div>
+        <div style="height:80px;">
+            <p style="font-size: 18px;">点击继续将<strong>添加课程</strong>,是否继续?</p>
+        </div>
+        <div style="height:50px;">
+            <button style="float:right;" type="button" class="cancel btn btn-default">取 消</button>
+            <button style="float:right;" type="button" id="sure_addCourse" class="btn btn-success">继 续</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

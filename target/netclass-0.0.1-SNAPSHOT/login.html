@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>网络课堂</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/cookie_util.js"></script>
+    <script type="text/javascript" src="js/basevalue.js"></script>
+    <script type="text/javascript" src="scripts/login.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#login").click(userLogin);
+        })
+    </script>
+    <style>
+        body{
+            background: url("images/background2.jpg") no-repeat;
+            height:100%;
+            width:100%;
+            background-size: auto;
+        }
+        #_logo {
+            width: 540px;
+            height: 380px;
+            margin: 0 auto;
+        }
+
+        label {
+            color: white;
+            font-size: 15px;
+        }
+
+        form {
+            position: relative;
+            left: 30px;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        #userId, #password {
+            display: inline-block;
+            width: 200px;
+        }
+
+        #_password{
+            position: relative;
+            left: 4px;
+        }
+
+        #_userType {
+            position: relative;
+            left: 80px;
+            color: #8c8c8c;
+        }
+
+        #_login {
+            width: 43px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+<div id="_logo">
+    <img src="images/logo_new.png">
+</div>
+
+<form>
+
+    <div id="_userId" class="form-group">
+        <label for="userId" style="font-size: 20px;color:#ffffff;">用户ID：</label>
+        <input id="userId" type="text" class="form-control">
+        <label id="userId_span" style="color: #ffffff;"></label>
+    </div>
+
+    <div id="_password" class="form-group">
+        <label for="password" style="font-size: 20px;color:#ffffff;">密&nbsp;&nbsp;&nbsp;码：</label>
+        <input id="password" type="password" class="form-control">
+        <label id="password_span" style="color: #ffffff;"></label>
+    </div>
+
+    <div id="_userType">
+        <div class="radio-inline">
+            <label>
+                <input type="radio" name="userType" value="student"> 学 生
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label>
+                <input type="radio" name="userType" value="teacher"> 教 师
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label>
+                <input type="radio" name="userType" value="admin"> 管理员
+            </label>
+        </div>
+
+        <span id="userType_span" style="position:relative;left:12px;color: #ffffff;"></span>
+    </div>
+
+
+</form>
+
+<div id="_login">
+    <button id="login" class="btn btn-default">登录</button>
+</div>
+
+
+</body>
+</html>

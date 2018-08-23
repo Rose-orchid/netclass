@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript">
+        $(function () {
+            var studentId = getCookie("userId");
+            $.ajax({
+                url: path + "/student/loadMyInfo.do",
+                type: "post",
+                data: {"studentId": studentId},
+                dataType: "json",
+                success: function (result) {
+                    var name = result.data.student_name;
+                    var gender = result.data.student_gender;
+                    var birthday = result.data.student_birthday;
+                    var signature = result.data.student_signature_line;
+                    $("#myName").val(name);
+                    $("#myGender").val(gender);
+                    $("#myBirthday").val(birthday);
+                    $("#signatureLine").val(signature);
+                },
+                error: function () {
+
+                }
+            })
+
+            $("#saveMyInfo").click(function () {
+                var studentId = getCookie("userId");
+                var name = $("#myName").val();
+                var gender = $("#myGender").val();
+                var birthday = $("#myBirthday").val();
+                var signature = $("#signatureLine").val();
+                $.ajax({
+                    url: path + "/student/updateInfo.do",
+                    type: "post",
+                    data: {
+                        "studentId": studentId,
+                        "name": name,
+                        "gender": gender,
+                        "birthday": birthday,
+                        "signature": signature
+                    },
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.status == 1) {
+                            $("#con").html("");
+                            $("#con").load("stuInfo.html");
+                            alert("保存成功!");
+                        }
+                    },
+                    error: function () {
+                        alert("保存失败");
+                    }
+                })
+            })
+
+        })
+
+    </script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+<div style="height: 600px; width: 850px; margin-left: 30px;">
+    <br>
+    <label style="font-size: 20px">姓名:</label><input type="text" style="width: 200px;" class="form-control" id="myName">
+    <br>
+    <label style="font-size: 20px">性别:</label><input type="text"  style="width: 200px;" class="form-control" id="myGender">
+    <br>
+    <label style="font-size: 20px">生日:</label><input type="text"  style="width: 200px;" class="form-control" id="myBirthday">
+    <br>
+    <label style="font-size: 20px">个性签名:</label><textarea style="height:150px;width:650px;"  class="form-control" id="signatureLine"></textarea>
+    <button style="float:right;margin-top: 20px;margin-right:200px;" class="btn btn-default" onclick="alert_MyInfo();">取消修改</button>
+    <button id="saveMyInfo" class="btn btn-primary" style="float:right;margin-top:20px;margin-right:20px;">保存信息</button>
+</div>
+</body>
+</html>

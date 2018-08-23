@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>课程详情</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/tea_global.css">
+    <link rel="stylesheet" href="css/left_global.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/cookie_util.js"></script>
+    <script type="text/javascript" src="js/basevalue.js"></script>
+    <script type="text/javascript" src="scripts/stu_course_detail.js"></script>
+    <script type="text/javascript">
+        function listHomework() {
+            var courseId = getCookie("courseId");
+            $("#work_ul").html("");
+            $.ajax({
+                url: path + "/file/loadAllHomework.do",
+                type: "post",
+                data: {
+                    "courseId":courseId
+                },
+                dataType: "json",
+                success: function (list) {
+                    for(var i=0;i<list.length;i++){
+                        var fileName = list[i].homework_name;
+                        var time = list[i].homework_time;
+                        createFileLi(fileName,time,i+1);
+                    }
+                },
+                error: function () {
+
+                }
+            });
+        }
+
+        function createFileLi(fileName, time, i) {
+            var sli = "";
+            sli += '<li>';
+            sli += i+'. ';
+            sli += '<a class="file">';
+            sli += fileName;
+            sli += '</a>';
+            sli += "<span>上传时间：";
+            sli += time;
+            sli += '</span></li><br>';
+            var $li = $(sli);
+            $li.data("fileName", fileName);
+            $("#work_ul").append($li);
+        }
+
+        function downloadWork() {
+            var fileName = $(this).data("fileName");
+            var courseName = getCookie("courseName");
+            var teacherName = getCookie("teacherName");
+            var url = path + "/file/downloadWork.do?fileName="+fileName+"&courseName="+courseName+"&teacherName="+teacherName;
+            window.open(url);
+        }
+
+        $(function () {
+            $("#userName").html("欢迎您，" + getCookie("userId"));
+            loadCourse();
+            listHomework();
+            $("#work_ul").on("click", "li", downloadWork);
+        })
+    </script>
+    <style>
+        #head_ {
+            width: 850px;
+            min-height: 600px;
+            background-color: white;
+            position: absolute;
+            left: 260px;
+            top: 60px;
+        }
+
+        #lab1{
+            font-size: 25px;
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        #work_ul{
+            position: relative;
+            top: 50px;
+            left: 40px;
+            font-size: 20px;
+        }
+
+        #work_ul hr{
+            width: 720px;
+        }
+
+        #work_ul li:hover{
+            cursor: default;
+        }
+
+        #work_ul span{
+            position: absolute;
+            right: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="top_">
+    <img id="top_logo" src="images/mooc.png">
+    <ul>
+        <li><a href="teaCourseDetail.html">首页</a></li>
+        <li><a href="teaCourseNotice.html">公告</a></li>
+        <li><a href="teaCourseForum.html">论坛</a></li>
+        <li><a href="teaCourseBoard.html">私信箱</a></li>
+        <li><a href="teaCourseWork.html">作业</a></li>
+    </ul>
+    <a id="userName">欢迎您，</a>
+    <a id="logout" href="login.html">退出</a>
+</div>
+<div id="body_">
+    <img id="book_img" class="img-rounded" src="images/book1.jpg">
+
+    <div id="course_info">
+        <div id="course_name">
+            <span id="courseName"></span>
+        </div>
+        <div id="teacher_name">
+            <p>授课教师:<span id="teacherName"></span></p>
+        </div>
+        <span id="courseIntro"></span>
+    </div>
+
+    <div id="head_">
+        <span id="lab1">收到的作业：</span>
+        <div id="work_ul">
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

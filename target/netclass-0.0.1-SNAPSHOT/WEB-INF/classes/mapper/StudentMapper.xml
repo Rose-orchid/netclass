@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.yexin.netclass.dao.StudentDao">
+
+    <select id="findStudentById" parameterType="string" resultType="cn.yexin.netclass.pojo.Student">
+		select * from nc_student where student_id=#{id}
+	</select>
+
+    <select id="findCourseById"
+            parameterType="string"
+            resultType="cn.yexin.netclass.pojo.Course">
+		select * from nc_course
+			where course_id = #{id}
+	
+	</select>
+
+    <select id="findMyCoursesById" parameterType="string" resultMap="courseMap1">
+		select * from nc_choose ch
+			join nc_course co on(ch.choose_course_id=co.course_id)
+		where ch.choose_student_id = #{id}
+	
+	</select>
+    <resultMap type="cn.yexin.netclass.pojo.Choose" id="courseMap1">
+        <id property="choose_id" column="choose_id"/>
+        <result property="choose_course_id" column="choose_course_id"/>
+        <result property="choose_student_id" column="choose_student_id"/>
+        <collection property="course" javaType="string" ofType="cn.yexin.netclass.pojo.Course">
+            <id property="course_id" column="course_id"/>
+            <result property="course_name" column="course_name"/>
+            <result property="course_notice" column="course_notice"/>
+            <result property="course_teacher_id" column="course_teacher_id"/>
+            <result property="course_teacher_name" column="course_teacher_name"/>
+        </collection>
+    </resultMap>
+
+    <select id="findMyCoursesById2" parameterType="string" resultType="cn.yexin.netclass.pojo.Course">
+		select co.* from nc_choose ch
+			join nc_course co on(ch.choose_course_id=co.course_id)
+			where ch.choose_student_id = #{id}
+	</select>
+
+    <select id="listAllCourse" parameterType="string" resultType="cn.yexin.netclass.pojo.Course">
+		select * from nc_course co 
+			where co.course_id not in 
+			(select ch.choose_course_id from nc_choose ch
+				where ch.choose_student_id=#{studentId})
+	</select>
+
+    <insert id="chooseCourse"
+            parameterType="cn.yexin.netclass.pojo.Choose"
+            useGeneratedKeys="true"
+            keyProperty="choose_id">
+		insert into nc_choose
+		(choose_course_id,
+		choose_student_id)
+		values
+		(#{choose_course_id},
+		#{choose_student_id})
+	</insert>
+
+    <!-- 发送留言给老师 -->
+    <insert id="sendMsg" parameterType="cn.yexin.netclass.pojo.Record">
+		insert into nc_record
+		(record_id,
+		record_course_id,
+		record_deliver_id,
+		record_deliver_name,
+		record_receiver_id,
+		record_receiver_name,
+		record_message,
+		record_time)
+		values
+		(#{record_id},
+		#{record_course_id},
+		#{record_deliver_id},
+		#{record_deliver_name},
+		#{record_receiver_id},
+		#{record_receiver_name},
+		#{record_message},
+		#{record_time})
+	</insert>
+
+    <select id="loadMessage" resultType="cn.yexin.netclass.pojo.Record">
+		select * from nc_record
+		where (record_course_id = #{courseId} and record_deliver_id = #{deliverId} and record_receiver_id = #{receiverId})
+		  or (record_course_id = #{courseId} and record_deliver_id = #{receiverId} and record_receiver_id = #{deliverId})
+		order by record_time
+	</select>
+
+    <!-- 更新学生个人信息 -->
+    <update id="updateMyInfo"
+            parameterType="cn.yexin.netclass.pojo.Student">
+        update nc_student
+        set
+        <trim suffixOverrides=",">
+            <if test="student_name!=null">student_name = #{student_name},</if>
+            <if test="student_gender!=null">student_gender = #{student_gender},</if>
+            <if test="student_birthday!=null">student_birthday = #{student_birthday},</if>
+            <if test="student_signature_line!=null">student_signature_line = #{student_signature_line}</if>
+        </trim>
+        where student_id = #{student_id}
+    </update>
+    
+    <!-- 发帖子 -->
+    <insert id="sendForum" parameterType="cn.yexin.netclass.pojo.Forum">
+    	insert into nc_forum
+    	(forum_id,
+    	forum_course_id,
+    	forum_user_id,
+    	forum_title,
+    	forum_content,
+    	forum_time)
+    	values
+    	(#{forum_id},
+    	#{forum_course_id},
+    	#{forum_user_id},
+    	#{forum_title},
+    	#{forum_content},
+    	#{forum_time})
+    </insert>
+    
+    <!-- 加载帖子 -->
+    <select id="loadForum" resultType="cn.yexin.netclass.pojo.Forum">
+    	select * from nc_forum
+    	where forum_course_id = #{courseId}
+    	order by forum_time DESC
+    </select>
+</mapper>

@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+#top_ {
+    width: 100%;
+    height: 60px;
+    background-color: #2E323E;
+    position: relative;
+}
+
+#top_logo {
+    position: absolute;
+    height: 58px;
+}
+
+#top_ ul {
+    display: inline-block;
+    position: absolute;
+    left: 350px;
+}
+
+#top_ li {
+    width: 130px;
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+    font-size: 25px;
+}
+
+#top_ a {
+    color: white;
+}
+
+#top_ a:hover {
+    color: #96D013;
+    text-decoration: none;
+}
+
+#userName {
+    position: absolute;
+    font-size: 20px;
+    top: 15px;
+    right: 110px;
+    color: white;
+    cursor: default;
+}
+
+#logout {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}

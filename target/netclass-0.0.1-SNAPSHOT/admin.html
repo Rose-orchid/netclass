@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>网络课堂_管理员</title>
+    <link href="css/admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/tea_global.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/cookie_util.js"></script>
+    <script type="text/javascript" src="js/basevalue.js"></script>
+    <script type="text/javascript" src="scripts/admin.js"></script>
+    <script>
+        $(function () {
+            $("#userName").html("欢迎您，" + getCookie("userId"));
+            listTeacher();
+            $("#list_teacher").click(listTeacher);
+            $("#add_teacher").click(function () {
+                $("#_con1").css("display", "none");
+                $("#_con3").css("display", "none");
+                $("#_con2").css("display", "inline");
+                $("#teacherId").val("");
+                $("#teacherName").val("");
+                $("#password").val("");
+                $("#password2").val("");
+                
+            })
+            $("#collect").click(function () {
+                $("#_con1").css("display", "none");
+                $("#_con2").css("display", "none");
+                $("#_con3").css("display", "inline");
+            })
+            //添加教师
+            $("#sure_add").click(addTeacher);
+            var teacherId;
+            $("#teacher_table").on("click", ".update_password", function () {
+                teacherId = $(this).parent().prev().prev().text();
+                $("#alert1").css("display", "inline");
+                $(".teacher_id").text(teacherId);
+            })
+            
+            $("#teacher_table").on("click", ".delete_teacher", function () {
+                teacherId = $(this).parent().prev().prev().prev().text();
+                $("#alert2").css("display", "inline");
+                $(".teacher_id").text(teacherId);
+            })
+            $(".concel").click(function () {
+                $("#alert1").css("display", "none");
+                $("#alert2").css("display", "none");
+            })
+            
+            $("#sure_delete").click(function(){
+            	$.ajax({
+                    url: path + "/admin/deleteTeacher.do",
+                    type: "post",
+                    data: {"teacherId": teacherId},
+                    dataType: "json",
+                    success: function () {
+                        $("#alert2").css("display", "none");
+                        alert("删除成功");
+                        listTeacher();
+                    },
+                    error: function () {
+                        alert("删除失败");
+                    }
+                })
+            });
+            
+            $("#sure_update").click(function(){
+            	var ok = true;
+                var password = $("#pwd1").val();
+                var password2 = $("#pwd2").val();
+
+                if (password != password2) {
+                    ok = false;
+                    alert("两次输入的密码不一致")
+                }
+                if (ok) {
+                    $.ajax({
+                        url: path + "/admin/updateTeaPwd.do",
+                        type: "post",
+                        data: {"teacherId": teacherId, "password": password},
+                        dataType: "json",
+                        success: function (result) {
+                            if (result.status == 1) {
+                                $("#alert1").css("display", "none");
+                                alert("修改成功");
+                                listTeacher();
+                            }
+                        },
+                        error: function () {
+                            alert("修改失败");
+                        }
+                    })
+                }
+            });
+        })
+    </script>
+
+</head>
+<body>
+
+<div id="top_">
+    <img id="top_logo" src="images/mooc.png">
+    <a id="userName">欢迎您，</a>
+    <a id="logout" href="login.html">退出</a>
+</div>
+
+<div id="_body">
+    <div><span style="position:absolute;top:20px; left:30px;font-size: 38px;">管理员系统</span></div>
+    <div id="left_">
+        <div id="list_teacher"><a>在职教师</a></div>
+        <div id="add_teacher"><a>添加教师</a></div>
+
+    </div>
+
+    <div id="_con1">
+        <table id="teacher_table" class="table table-hover">
+            <tr>
+                <td>0</td>
+                <td>教师ID</td>
+                <td>姓名</td>
+                <td><a href="">修改密码</a></td>
+                <td><a href="">删除教师</a></td>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <div id="_con2">
+        <div id="addTeacher">
+            <span>教 师 I D:</span><input type="text" id="teacherId" class="form-control"><br><br>
+            <span>教师姓名:</span><input type="text" id="teacherName" class="form-control"><br><br>
+            <span>设置密码:</span><input type="password" id="password" class="form-control"><br><br>
+            <span>确认密码:</span><input type="password" id="password2" class="form-control"><br><br><br>
+            <button id="sure_add" class="btn btn-primary">添加</button>
+            <button id="concel" class="btn btn-default">取消</button>
+        </div>
+    </div>
+
+    <div id="_con3">
+    </div>
+
+</div>
+
+
+<div id="alert_con">
+
+    <div id="alert1">
+        <div id="div1"><span>教 师 ID:</span><span class="teacher_id"></span></div>
+        <div id="div2"><span>新 密 码:</span><input id="pwd1" type="password" class="form-control"
+                                                 style="width: 250px;display: inline-block"></div>
+        <div id="div3"><span>确认密码:</span><input id="pwd2" type="password" class="form-control"
+                                                style="width: 250px;display: inline-block"></div>
+        <div id="div4">
+            <button id="sure_update" class="btn btn-primary">确定</button>
+            <button class="concel btn btn-default">取消</button>
+        </div>
+    </div>
+
+    <div id="alert2">
+        <div id="div5" style="font-size: 20px;"><span>确认删除ID为:</span><span class="teacher_id"></span><span>的教师吗？</span>
+        </div>
+        <div>
+            <button id="sure_delete" class="btn btn-primary">确定</button>
+            <button class="concel btn btn-default">取消</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

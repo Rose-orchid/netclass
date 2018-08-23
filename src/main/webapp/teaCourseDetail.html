@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>课程详情</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/tea_global.css">
+    <link rel="stylesheet" href="css/left_global.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/cookie_util.js"></script>
+    <script type="text/javascript" src="js/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="js/basevalue.js"></script>
+    <script type="text/javascript" src="scripts/tea_course_detail.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#userName").html("欢迎您，" + getCookie("userId"));
+            loadCourse();
+            $("#files_ul").on("click", "li", download);
+            $("#updateNotice").click(updateNotice);
+            $("#upload").click(function () {
+                $("#upload_").css("display","inline");
+            })
+            $(".concel_upload").click(function () {
+                $("#upload_").css("display","none");
+            })
+        })
+    </script>
+    <style>
+        #upload{
+            background-color: #55B929;
+            color: white;
+            position: fixed;
+            bottom: 70px;
+            right: 70px;
+        }
+
+        #content_ {
+            position: absolute;
+            left: 260px;
+            top: 60px;
+            width: 850px;
+            min-height: 800px;
+            background-color: white;
+        }
+
+        #span1 {
+            font-size: 24px;
+            position: relative;
+            top: 30px;
+            left: 110px;
+        }
+
+        #span3{
+            font-size: 24px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+        }
+        #p1{
+            font-size: 20px;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+
+        }
+
+        #wareDescribe{
+            width: 250px;
+            display: inline;
+            position: absolute;
+            top: 100px;
+            left: 20px;
+        }
+        #file1{
+            position: absolute;
+            top: 150px;
+            left: 20px;
+        }
+
+        #courseNotice {
+            position: relative;
+            left: 100px;
+            top: 50px;
+            width: 600px;
+            height: 150px;
+        }
+
+        #updateNotice {
+            position: absolute;
+            top: 200px;
+            left: 720px;
+        }
+
+        #hr1 {
+            width: 80%;
+            position: relative;
+            top: 100px;
+            margin: 0 auto;
+        }
+
+        #span2 {
+            font-size: 24px;
+            position: relative;
+            top: 80px;
+            left: 110px;
+        }
+
+        #files_ul {
+            position: relative;
+            top: 150px;
+            left: 110px;
+            height: auto;
+        }
+
+        #upload_ {
+            display: none;
+            border: 4px solid #55B929;
+            width: 330px;
+            height: 300px;
+            background-color: white;
+            position: fixed;
+            top: 120px;
+            left: 550px;
+        }
+
+        #upload_file{
+            position: absolute;
+            bottom: 50px;
+            left: 70px;
+        }
+
+        .concel_upload{
+            position: absolute;
+            bottom: 50px;
+            right: 70px;
+        }
+
+
+
+
+
+
+
+        #files_ul li {
+            font-size: 16px;
+        }
+
+        #files_ul span {
+            position: absolute;
+            left: 400px;
+        }
+
+        .file:hover {
+            text-decoration: underline;
+            cursor: default;
+        }
+    </style>
+
+</head>
+<body>
+<div id="top_">
+    <img id="top_logo" src="images/mooc.png">
+    <ul>
+        <li><a href="teaCourseDetail.html">首页</a></li>
+        <li><a href="teaCourseNotice.html">公告</a></li>
+        <li><a href="teaCourseForum.html">论坛</a></li>
+        <li><a href="teaCourseBoard.html">私信箱</a></li>
+        <li><a href="teaCourseWork.html">作业</a></li>
+    </ul>
+    <a id="userName">欢迎您，</a>
+    <a id="logout" href="login.html">退出</a>
+</div>
+
+<div id="body_">
+    <img id="book_img" class="img-rounded" src="images/book1.jpg">
+    <div id="course_info">
+        <div id="course_name">
+            <span id="courseName"></span>
+        </div>
+        <div id="teacher_name">
+            <p>授课教师:<span id="teacherName"></span></p>
+        </div>
+        <span id="courseIntro"></span>
+    </div>
+    <button id="upload" class="btn btn-lg">上传课件</button>
+
+    <div id="content_">
+        <span id="span1">最新公告</span>
+        <textarea class="form-control" id="courseNotice"></textarea>
+        <button class="btn btn-primary" id="updateNotice">更新公告</button>
+        <span id="span2">课程资料</span>
+        <hr id="hr1">
+        <div id="files_ul">
+
+        </div>
+    </div>
+    <div id="upload_">
+        <span id="span3">上传资料</span>
+        <br>
+        <span id="p1">文件描述:</span>
+        <input class="form-control" type="text" id="wareDescribe">
+        <input type="file" class="btn" name="file" id="file1">
+        <input type="button" class="btn btn-success" id="upload_file" value="上传课件" onclick="upload();">
+        <button class="concel_upload btn btn-default"> &nbsp;&nbsp;取&nbsp;&nbsp;&nbsp;消&nbsp;&nbsp; </button>
+    </div>
+</div>
+
+</body>
+</html>

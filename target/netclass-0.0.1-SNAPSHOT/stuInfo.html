@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript">
+        $(function () {
+            var studentId = getCookie("userId");
+            $.ajax({
+                url: path + "/student/loadMyInfo.do",
+                type: "post",
+                data: {"studentId": studentId},
+                dataType: "json",
+                success: function (result) {
+                    var name = result.data.student_name;
+                    var gender = result.data.student_gender;
+                    var birthday = result.data.student_birthday;
+                    var signature = result.data.student_signature_line;
+                    $("#myName").text(name);
+                    $("#myGender").text(gender);
+                    $("#myBirthday").text(birthday);
+                    $("#signatureLine").text(signature);
+                },
+                error: function () {
+
+                }
+            })
+            $("#updateMyInfo").click(function () {
+                $("#con").html("");
+                $("#con").load("stuInfo_update.html");
+            })
+        })
+    </script>
+    <style>
+        #myName,#myBirthday,#myGender{
+            position: relative;
+            left: 200px;
+        }
+        #signatureLine{
+            position: relative;
+            left: 160px;
+        }
+    </style>
+</head>
+<body>
+<div style="height: 600px; width: 850px; margin-left: 30px;">
+    <button id="updateMyInfo" class="btn btn-default" style="float:right;margin-top:20px;">修改信息</button>
+    <br>
+    <p style="font-size: 20px">姓名:<span id="myName" style="color: black;" ></span></p>
+    <br>
+    <p style="font-size: 20px">性别:<span id="myGender" style="color: black;"></span></p>
+    <br>
+    <p style="font-size: 20px">生日:<span id="myBirthday" style="color: black;"></span></p>
+    <br>
+    <p style="font-size: 20px;">个性签名:<span id="signatureLine" style=" color: black;"></span></p>
+</div>
+</body>
+</html>

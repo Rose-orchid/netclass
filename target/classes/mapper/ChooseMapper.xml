@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.yexin.netclass.dao.ChooseDao">
+
+    <select id="findMyCoursesById" parameterType="string" resultMap="courseMap1">
+		select * from nc_choose ch
+			join nc_course co on(ch.choose_course_id=co.course_id)
+		where ch.choose_student_id = #{id}
+	
+	</select>
+    <resultMap type="cn.yexin.netclass.pojo.Choose" id="courseMap1">
+        <id property="choose_id" column="choose_id"/>
+        <result property="choose_course_id" column="choose_course_id"/>
+        <result property="choose_student_id" column="choose_student_id"/>
+        <collection property="course" javaType="string" ofType="cn.yexin.netclass.pojo.Course">
+            <id property="course_id" column="course_id"/>
+            <result property="course_name" column="course_name"/>
+            <result property="course_notice" column="course_notice"/>
+            <result property="course_teacher_id" column="course_teacher_id"/>
+            <result property="course_teacher_name" column="course_teacher_name"/>
+        </collection>
+    </resultMap>
+
+</mapper>

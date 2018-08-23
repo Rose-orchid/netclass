@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>教师登录</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/tea_global.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/cookie_util.js"></script>
+    <script type="text/javascript" src="js/basevalue.js"></script>
+    <script type="text/javascript" src="scripts/teacher.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //打开页面时就直接加载课程
+            $("#userName").html("欢迎您，" + getCookie("userId"));
+            listmyclass();
+            //加载我的课程
+            $("#listmyclass").click(listmyclass);
+            //弹出添加课程页面
+            $("#addclass").click(alertaddclass);
+            //弹出个人信息页面
+            $("#my_info").click(alertMyInfo);
+            //关闭对话框,对所有对话框都生效
+            $("#_con").on("click", ".cancel,.close", closeAlertWindow);
+            //添加课程
+            $("#_con").on("click", "#confirm", addCourse);
+            $("#_con").on("click", "li", loadCourseDetail);
+        })
+    </script>
+    <style>
+        #left_ {
+            position: relative;
+            top: 100px;
+            left: 20px;
+            width: 200px;
+            min-height: 400px;
+        }
+
+        #left_ div {
+            background-color: #F8F8F8;
+            border: 1px #eeeeee solid;
+            width: 200px;
+            height: 50px;
+        }
+
+        #left_ a {
+            position: relative;
+            left: 20px;
+            height: 50px;
+            font-size: 25px;
+            line-height: 50px;
+        }
+
+        #left_ a:hover {
+            text-decoration: none;
+            cursor: default;
+            color: #96D013;
+        }
+        #_con {
+            background-color: white;
+            position: absolute;
+            left: 250px;
+            top: 60px;
+            width: 900px;
+            height: auto;
+            min-height: 600px;
+        }
+
+        #_con li {
+            display: inline-block;
+            height: 280px;
+            width: 240px;
+            margin: 20px 20px;
+            border: 1px #eeeeee solid;
+            position: relative;
+            background-color: #ffffff;
+        }
+
+        #_con li:hover {
+            box-shadow: 5px 6px 5px #eeeeee;
+            cursor: pointer;
+        }
+
+        #_con li img {
+            height: 180px;
+            width: 230px;
+        }
+
+        #_con li p {
+            font-size: 20px;
+            position: relative;
+            top: 15px;
+            left: 20px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div id="top_">
+    <img id="top_logo" src="images/mooc.png">
+    <a id="userName">欢迎您，</a>
+    <a id="logout" href="login.html">退出</a>
+</div>
+
+<div><span style="position:absolute;top:80px; left:40px;font-size: 38px;">教师系统</span></div>
+
+<div id="left_">
+    <div id="listmyclass"><a>我的课程</a></div>
+    <div id="addclass"><a>创建课程</a></div>
+    <div id="my_info"><a>个人中心</a></div>
+</div>
+
+<div id="_con">
+
+</div>
+
+</body>
+</html>

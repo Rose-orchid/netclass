@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.yexin.netclass.dao.CoursewareDao">
+
+    <insert id="uploadCourseware"
+            parameterType="cn.yexin.netclass.pojo.Courseware">
+		insert into nc_courseware 
+			(courseware_id,
+			courseware_name,
+			courseware_describe,
+			courseware_teacher,
+			courseware_course,
+			courseware_time)
+		values 
+			(#{courseware_id},
+			#{courseware_name},
+			#{courseware_describe},
+			#{courseware_teacher},
+			#{courseware_course},
+			#{courseware_time})
+	</insert>
+
+	<select id="listCourseware" parameterType="string" resultType="cn.yexin.netclass.pojo.Courseware">
+		select * from nc_courseware
+		where courseware_teacher = #{teacherName} and courseware_course = #{courseName}
+		order by courseware_time DESC
+	</select>
+
+</mapper>

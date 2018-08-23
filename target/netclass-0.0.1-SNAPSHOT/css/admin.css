@@ -1,0 +1,168 @@
+#left_ {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 200px;
+    min-height: 400px;
+}
+
+#left_ div {
+    background-color: #F8F8F8;
+    border: 1px #eeeeee solid;
+    width: 200px;
+    height: 50px;
+}
+
+#left_ a {
+    position: relative;
+    left: 20px;
+    height: 50px;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+#left_ a:hover {
+    text-decoration: none;
+    cursor: default;
+    color: #96D013;
+}
+
+#_body {
+    width: 100%;
+    background-color: #eeeeee;
+    min-height: 600px;
+    overflow: scroll;
+    position: relative;
+}
+
+#_con1 {
+    display: none;
+    position: absolute;
+    left: 250px;
+    background-color: white;
+    width: 900px;
+    overflow: hidden;
+    min-height: 600px;
+}
+
+#_con2 {
+    display: none;
+    background-color: white;
+    width: 900px;
+    overflow: hidden;
+    min-height: 600px;
+    position: absolute;
+    left: 250px;
+}
+
+#teacher_table {
+    position: relative;
+    left: 80px;
+    top: 50px;
+    width: 700px;
+}
+
+#addTeacher {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+}
+
+#addTeacher input {
+    display: inline;
+}
+
+#sure_add {
+    position: relative;
+    left: 50px;
+}
+
+#concel {
+    position: relative;
+    left: 100px;
+}
+
+#_con3 {
+    background-color: #5bc0de;
+}
+
+#alert1 {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 450px;
+    width: 500px;
+    height: 200px;
+    background-color: #eeeeee;
+}
+
+#alert2 {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 450px;
+    width: 500px;
+    height: 200px;
+    background-color: #eeeeee;
+}
+
+#div1 {
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    left: 39px;
+}
+
+#div2 {
+    font-size: 20px;
+    position: absolute;
+    top: 60px;
+    left: 38px;
+}
+
+#div3 {
+    font-size: 20px;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+
+#div4 {
+    font-size: 20px;
+    position: absolute;
+    top: 150px;
+    left: 30px;
+}
+
+#sure_update {
+    position: relative;
+    left: 100px;
+}
+
+#alert1 .concel {
+    position: relative;
+    left: 200px;
+}
+
+#div5 {
+    font-size: 20px;
+    position: relative;
+    top: 50px;
+    left: 120px;
+}
+
+#sure_delete {
+    position: relative;
+    top: 100px;
+    left: 150px;
+}
+
+#alert2 .concel {
+    position: relative;
+    top: 100px;
+    left: 250px;
+}
+
+table a{
+    cursor: pointer;
+}

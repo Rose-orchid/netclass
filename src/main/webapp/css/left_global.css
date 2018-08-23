@@ -1,0 +1,45 @@
+#book_img {
+    width: 230px;
+    height: 130px;
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+
+#course_info {
+    width: 230px;
+    min-height: 400px;
+    background-color: white;
+    position: relative;
+    top: 40px;
+    left: 20px;
+}
+
+#course_name {
+    width: 100%;
+    height: 60px;
+    background-color: #55B929;
+}
+
+#teacher_name {
+    width: 100%;
+    height: 40px;
+    background-color: #cccccc;
+}
+
+#courseName {
+    font-size: 30px;
+    line-height: 60px;
+    color: white;
+    padding-left: 20px;
+}
+
+#teacherName {
+    font-size: 20px;
+    line-height: 50px;
+
+}
+
+#courseIntro {
+    font-size: 14px;
+}

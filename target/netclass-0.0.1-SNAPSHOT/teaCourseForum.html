@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>课程详情</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/tea_global.css">
+    <link rel="stylesheet" href="css/left_global.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/cookie_util.js"></script>
+    <script type="text/javascript" src="js/basevalue.js"></script>
+    <script type="text/javascript" src="scripts/stuCourseForum.js"></script>
+    <script type="text/javascript" src="scripts/tea_course_detail.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#userName").html("欢迎您，" + getCookie("userId"));
+            loadCourse();
+            loadForum();
+            $("#delive").click(deliveForum);
+        })
+    </script>
+    <style>
+
+        #fatie {
+            position: relative;
+            top: 10px;
+            left: 30px;
+            width: 800px;
+            height: 200px;
+            background-color: #eeeeee;
+        }
+
+        #lab1 {
+            position: relative;
+            top: 10px;
+            left: 20px;
+        }
+
+        #title {
+            position: relative;
+            top: 10px;
+            left: 30px;
+            width: 720px;
+            display: inline;
+        }
+
+        #lab2 {
+            position: relative;
+            bottom: 60px;
+            left: 20px;
+        }
+
+        #content {
+            display: inline;
+            width: 720px;
+            position: relative;
+            top: 20px;
+            left: 30px;
+            height: 100px;
+        }
+
+        #delive {
+            position: absolute;
+            top: 160px;
+            right: 20px;
+            height: 30px;
+        }
+
+        #bbs_ {
+            width: 900px;
+            position: absolute;
+            top: 60px;
+            left: 260px;
+            background-color: white;
+            min-height: 600px;
+        }
+
+        #bbs_list {
+            position: relative;
+            top: 30px;
+            left: 30px;
+            width: 800px;
+        }
+
+        .tiezi {
+            position: relative;
+            background-color: #EEEEEE;
+            margin: 5px auto;
+            width: 800px;
+            min-height: 200px;
+        }
+
+        .tiezi img {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            width: 120px;
+            height: 150px;
+        }
+
+        .userName {
+            position: absolute;
+            top: 175px;
+            left: 60px;
+        }
+
+        .title {
+            position: relative;
+            bottom: 50px;
+            left: 60px;
+        }
+        .tiezi hr {
+            position: relative;
+            bottom: 135px;
+            left: 180px;
+            width: 600px;
+            border: none;
+            background-color: white;
+            height: 1px;
+        }
+        .content {
+            position: absolute;
+            bottom: 140px;
+            left: 180px;
+        }
+
+        .time {
+            position: absolute;
+            bottom: 25px;
+            right: 80px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="top_">
+    <img id="top_logo" src="images/mooc.png">
+    <ul>
+        <li><a href="teaCourseDetail.html">首页</a></li>
+        <li><a href="teaCourseNotice.html">公告</a></li>
+        <li><a href="teaCourseForum.html">论坛</a></li>
+        <li><a href="teaCourseBoard.html">私信箱</a></li>
+        <li><a href="teaCourseWork.html">作业</a></li>
+    </ul>
+    <a id="userName">欢迎您，</a>
+    <a id="logout" href="login.html">退出</a>
+</div>
+
+<div id="body_">
+    <img id="book_img" class="img-rounded" src="images/book1.jpg">
+    <div id="course_info">
+        <div id="course_name">
+            <span id="courseName"></span>
+        </div>
+        <div id="teacher_name">
+            <p>授课教师:<span id="teacherName"></span></p>
+        </div>
+        <span id="courseIntro"></span>
+    </div>
+
+    <div id="bbs_">
+
+        <div id="fatie">
+            <label id="lab1">标题:</label><input type="text" id="title" class="form-control"><br>
+            <label id="lab2">内容:</label><textarea id="content" class="form-control"></textarea>
+            <button id="delive" class="btn btn-default">发帖</button>
+        </div>
+
+        <div id="bbs_list">
+            <!--
+            <div class="tiezi">
+                <img src="images/touxiang.png">
+                <a class="userName">用户名</a>
+                <span class="title">这是一篇新的帖子</span>
+                <hr>
+                <span class="content">
+                早在“五四”运动时期，他就以充满革命激情的诗歌创作，歌颂人民革命，歌颂社会主义和共产主义，开一代诗风，成为我国新诗歌运动的奠基者。他创作的历史剧，是教育人民、打击敌人的有力武器。（邓小平评）[12]
+                如果他说了十句，只有三句对了，那七句错的可以刺激起大家的研究辩证，那说对了三句，就为同时代和以后的人省了很多冤枉路。（闻一多评）
+                郭沫若是二十世纪的文化巨人、中国历史上的文化巨人。五四运动以后，像郭沫若这样在许多的方面都取得成就的人是不多的，可以用奇才这个词来形容。郭沫若在学术的若干领域，特别是在中国诗歌史上，在中国古史研究、古文字研究方面所取得的成就都是辉煌的、巨大的。这些年，特别是近几年来对郭沫若的批评，有的符合事实，有的是歪曲事实的。出现批评和新的看法，是社会进步的表现。从总体上说，它会推动学术的进步和文化的发展，一个正常的学术环境应当是有批评有反批评的，但是，在对郭沫若的反思中，有些文章、有些学者采取了轻薄的态度，这是不正确的，应该注意以科学的态度来对他进行研究。
+            </span>
+                <span class="time">2018-3-11 13:36</span>
+            </div>
+            -->
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

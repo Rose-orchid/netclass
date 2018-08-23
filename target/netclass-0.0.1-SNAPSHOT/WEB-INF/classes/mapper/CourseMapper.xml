@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.yexin.netclass.dao.CourseDao">
+
+    <select id="findCourseById"
+            parameterType="string"
+            resultType="cn.yexin.netclass.pojo.Course">
+		select * from nc_course
+			where course_id = #{id}
+	
+	</select>
+
+</mapper>

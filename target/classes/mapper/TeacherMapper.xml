@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.yexin.netclass.dao.TeacherDao">
+    <!-- 查询一个教师 -->
+    <select id="findTeacherById"
+            parameterType="string"
+            resultType="cn.yexin.netclass.pojo.Teacher">
+		select * from nc_teacher where teacher_id=#{id}
+	</select>
+
+    <select id="findCourseById"
+            parameterType="string"
+            resultType="cn.yexin.netclass.pojo.Course">
+		select * from nc_course
+			where course_id = #{id}
+	</select>
+
+    <!-- 创建一个新的课程 -->
+    <insert id="addCourse"
+            parameterType="cn.yexin.netclass.pojo.Course">
+		insert into nc_course 
+			(course_id,
+			course_name,
+			course_teacher_id,
+			course_teacher_name,
+			course_intro,
+			course_notice)
+		values 
+			(#{course_id},
+			#{course_name},
+			#{course_teacher_id},
+			#{course_teacher_name},
+			#{course_intro},
+			#{course_notice})
+	</insert>
+
+    <!-- 列出某个教师的全部课程 -->
+    <select id="listCourse"
+            parameterType="string"
+            resultType="cn.yexin.netclass.pojo.Course">
+		select * from nc_course where course_teacher_id = #{id}
+	</select>
+
+    <!-- 删除课程  -->
+    <delete id="deleteCourse"
+            parameterType="string">
+		delete from nc_course where course_id = #{id}
+	</delete>
+
+    <!-- 更新课程信息(包含课程简介和课程公告) -->
+    <update id="updateCourse"
+            parameterType="cn.yexin.netclass.pojo.Course">
+        update nc_course
+        set
+        <trim suffixOverrides=",">
+            <if test="course_name!=null">course_name = #{course_name},</if>
+            <if test="course_notice!=null">course_notice = #{course_notice},</if>
+            <if test="course_intro!=null">course_intro = #{course_intro}</if>
+        </trim>
+        where course_id = #{course_id}
+    </update>
+
+    <!-- 更新教师个人信息 -->
+    <update id="updateMyInfo"
+            parameterType="cn.yexin.netclass.pojo.Teacher">
+        update nc_teacher
+        set
+        <trim suffixOverrides=",">
+            <if test="teacher_name!=null">teacher_name = #{teacher_name},</if>
+			<if test="teacher_password!=null">teacher_password = #{teacher_password},</if>
+            <if test="teacher_gender!=null">teacher_gender = #{teacher_gender},</if>
+            <if test="teacher_birthday!=null">teacher_birthday = #{teacher_birthday},</if>
+            <if test="teacher_signature_line!=null">teacher_signature_line = #{teacher_signature_line}</if>
+        </trim>
+        where teacher_id = #{teacher_id}
+    </update>
+
+    <!-- 查询学生给我的留言 -->
+    <select id="loadMessage" parameterType="string" resultType="cn.yexin.netclass.pojo.Record">
+		select * from nc_record
+		where record_course_id = #{courseId} 
+		and (record_deliver_id = #{teacherId} 
+		or record_receiver_id = #{teacherId})
+		order by record_time
+	</select>
+
+    <!-- 给学生回信息 -->
+    <insert id="sendMsg" parameterType="cn.yexin.netclass.pojo.Record">
+		insert into nc_record
+		(record_id,
+		record_course_id,
+		record_deliver_id,
+		record_deliver_name,
+		record_receiver_id,
+		record_receiver_name,
+		record_message,
+		record_time)
+		values
+		(#{record_id},
+		#{record_course_id},
+		#{record_deliver_id},
+		#{record_deliver_name},
+		#{record_receiver_id},
+		#{record_receiver_name},
+		#{record_message},
+		#{record_time})
+	</insert>
+	
+	<!-- 更新公告时向数据库插入一条历史公告 -->
+	<insert id="insertHistoryNotice" parameterType="cn.yexin.netclass.pojo.Notice">
+	insert into nc_notice
+	(notice_id,
+	notice_course_id,
+	notice_content,
+	notice_time)
+	values
+	(#{notice_id},
+	#{notice_course_id},
+	#{notice_content},
+	#{notice_time})
+	</insert>
+	
+	<!-- 加载公告 -->
+    <select id="loadNotice" resultType="cn.yexin.netclass.pojo.Notice">
+    	select * from nc_notice
+    	where notice_course_id = #{courseId}
+    	order by notice_time DESC
+    </select>
+</mapper>

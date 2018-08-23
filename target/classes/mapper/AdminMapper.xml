@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="cn.yexin.netclass.dao.AdminDao">
+
+    <select id="findAdminById" parameterType="string" resultType="cn.yexin.netclass.pojo.Admin">
+		select * from nc_admin where admin_id=#{id}
+	</select>
+
+
+    <insert id="registerAdmin"
+            parameterType="cn.yexin.netclass.pojo.Admin"
+            useGeneratedKeys="true"
+            keyProperty="nc_admin_id">
+		insert into nc_admin 
+			(nc_admin_name,
+			nc_admin_password)
+		values 
+			(#{nc_admin_name},
+			#{nc_admin_password})
+	</insert>
+
+    <insert id="addTeacher" parameterType="cn.yexin.netclass.pojo.Teacher">
+		insert into nc_teacher
+			(teacher_id,
+			teacher_name,
+			teacher_password)
+		values
+			(#{teacher_id},
+			#{teacher_name},
+			#{teacher_password}
+		)
+	</insert>
+
+    <select id="listTeacher" resultType="cn.yexin.netclass.pojo.Teacher">
+        select * from nc_teacher
+    </select>
+
+    <delete id="deleteTeacher" parameterType="string">
+		delete from nc_teacher where teacher_id = #{teacherId}
+	</delete>
+
+    <update id="updateTeaPwd" parameterType="cn.yexin.netclass.pojo.Teacher">
+        update nc_teacher
+        set
+        <trim suffixOverrides=",">
+            <if test="teacher_name!=null">teacher_name = #{teacher_name},</if>
+            <if test="teacher_password!=null">teacher_password = #{teacher_password},</if>
+            <if test="teacher_gender!=null">teacher_gender = #{teacher_gender},</if>
+            <if test="teacher_birthday!=null">teacher_birthday = #{teacher_birthday},</if>
+            <if test="teacher_signature_line!=null">teacher_signature_line = #{teacher_signature_line}</if>
+        </trim>
+        where teacher_id = #{teacher_id}
+    </update>
+</mapper>
