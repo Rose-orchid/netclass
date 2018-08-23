@@ -27,6 +27,6 @@ public interface TeacherService {
     Result<Integer> sendMessage(String courseId, String deliverId, String deliverName, String receiverId, String receiverName, String msg, String time);
 
     Result<Integer> updateMyInfo(String teacherId, String name, String gender, String birthday, String signature);
-    
+
     Result<List<Notice>> loadNotice(String courseId);
 }

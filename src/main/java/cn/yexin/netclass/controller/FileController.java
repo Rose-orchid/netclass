@@ -38,15 +38,15 @@ import cn.yexin.netclass.service.HomeworkService;
 @Controller
 public class FileController {
 
-	@Resource
-	private CoursewareService coursewareService;
-	@Resource
-	private HomeworkService homeworkService;
-	
-	//教师上传课件
+    @Resource
+    private CoursewareService coursewareService;
+    @Resource
+    private HomeworkService homeworkService;
+
+    //教师上传课件
     @RequestMapping(value = "/upload.do")
     @ResponseBody
-    public String upload(MultipartFile file, HttpServletRequest request, String teacherName, String courseName,String wareDescribe)
+    public String upload(MultipartFile file, HttpServletRequest request, String teacherName, String courseName, String wareDescribe)
             throws IOException {
         // String path =
         // request.getSession().getServletContext().getRealPath("..\\upload");
@@ -61,7 +61,7 @@ public class FileController {
         file.transferTo(dir);
         //System.out.println(path);
         //System.out.println(fileName);
-        
+
         String msg = coursewareService.uploadCourseware(fileName, wareDescribe, teacherName, courseName);
         return msg;
     }
@@ -85,7 +85,7 @@ public class FileController {
 //            Map.Entry<String, String> entry = it.next();
 //            System.out.println("文件名:" + entry.getKey() + "\t绝对路径:" + entry.getValue());
 //        }
-        List<Courseware> list = coursewareService.listCourseware(teacherName, courseName); 
+        List<Courseware> list = coursewareService.listCourseware(teacherName, courseName);
         return list;
         // request.getRequestDispatcher("/download.jsp").forward(request, response);
     }
@@ -238,7 +238,7 @@ public class FileController {
 
     @RequestMapping(value = "/uploadHomework.do")
     @ResponseBody
-    public String uploadHomework(MultipartFile file, HttpServletRequest request, String teacherName, String courseName,String courseId,String studentId)
+    public String uploadHomework(MultipartFile file, HttpServletRequest request, String teacherName, String courseName, String courseId, String studentId)
             throws IOException {
         // String path =
         // request.getSession().getServletContext().getRealPath("..\\upload");
@@ -253,14 +253,14 @@ public class FileController {
         file.transferTo(dir);
         //System.out.println(path);
         //System.out.println(fileName);
-        
-        String msg = homeworkService.uploadHomework(fileName,studentId,courseId);
+
+        String msg = homeworkService.uploadHomework(fileName, studentId, courseId);
         return msg;
     }
 
     @RequestMapping(value = "/loadHomework.do")
     @ResponseBody
-    public List<Homework> listHomework(String teacherName, String courseName,String courseId,String studentId) {
+    public List<Homework> listHomework(String teacherName, String courseName, String courseId, String studentId) {
 //        String path = "D:\\homework" + "\\" + teacherName + "\\" + courseName;
 //        Map<String, String> filesMap = new HashMap<String, String>();
 //        File file = new File(path);
@@ -274,7 +274,7 @@ public class FileController {
 //        }
 //        return filesMap;
 //        // request.getRequestDispatcher("/download.jsp").forward(request, response);
-    	List<Homework> list = homeworkService.listHomework(studentId,courseId); 
+        List<Homework> list = homeworkService.listHomework(studentId, courseId);
         return list;
     }
 

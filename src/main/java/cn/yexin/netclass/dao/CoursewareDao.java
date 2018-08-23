@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface CoursewareDao {
 
-	int uploadCourseware(Courseware courseware);
-	List<Courseware> listCourseware(@Param("teacherName")String teacherName, @Param("courseName")String courseName);
+    int uploadCourseware(Courseware courseware);
+
+    List<Courseware> listCourseware(@Param("teacherName") String teacherName, @Param("courseName") String courseName);
 }

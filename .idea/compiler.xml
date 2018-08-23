@@ -9,8 +9,5 @@
         <module name="netclass" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="netclass" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>

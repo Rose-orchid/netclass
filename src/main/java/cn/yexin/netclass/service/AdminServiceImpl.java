@@ -46,7 +46,7 @@ public class AdminServiceImpl implements AdminService {
         teacher.setTeacher_name(username);
         teacher.setTeacher_password(password);
         int i = adminDao.addTeacher(teacher);
-        if(i == 1){
+        if (i == 1) {
             result.setStatus(1);
             result.setMsg("添加成功");
             return result;
@@ -67,7 +67,7 @@ public class AdminServiceImpl implements AdminService {
     public Result<Integer> deleteTeacher(String teacherId) {
         Result<Integer> result = new Result<Integer>();
         int i = adminDao.deleteTeacher(teacherId);
-        if (i != 1){
+        if (i != 1) {
             result.setStatus(0);
             result.setMsg("删除失败");
             return result;
@@ -83,7 +83,7 @@ public class AdminServiceImpl implements AdminService {
         teacher.setTeacher_password(password);
         teacher.setTeacher_id(teacherId);
         int i = adminDao.updateTeaPwd(teacher);
-        if (i != 1){
+        if (i != 1) {
             result.setStatus(0);
             result.setMsg("修改失败");
             return result;

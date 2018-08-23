@@ -6,6 +6,7 @@ import cn.yexin.netclass.pojo.Courseware;
 
 public interface CoursewareService {
 
-	String uploadCourseware(String wareName,String wareDescribe,String wareTeacher,String wareCourse);
-	List<Courseware> listCourseware(String teacherName,String courseName);
+    String uploadCourseware(String wareName, String wareDescribe, String wareTeacher, String wareCourse);
+
+    List<Courseware> listCourseware(String teacherName, String courseName);
 }

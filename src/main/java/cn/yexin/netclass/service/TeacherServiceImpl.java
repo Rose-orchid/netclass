@@ -81,17 +81,17 @@ public class TeacherServiceImpl implements TeacherService {
     public Result<Course> UpdateCourse(String courseId, String courseNotice) {
         Result<Course> result = new Result<Course>();
         Course course = new Course();
-        
+
         Notice notice = new Notice();
         notice.setNotice_id(UUID.randomUUID().toString());
         notice.setNotice_course_id(courseId);
         notice.setNotice_content(courseNotice);
-        
+
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = new Date();
         String time = sdf.format(date);
         notice.setNotice_time(time);
-        
+
         course.setCourse_id(courseId);
         course.setCourse_notice(courseNotice);
         int i = teacherDao.updateCourse(course);
@@ -191,14 +191,14 @@ public class TeacherServiceImpl implements TeacherService {
         return result;
     }
 
-	public Result<List<Notice>> loadNotice(String courseId) {
-		Result<List<Notice>> result = new Result<List<Notice>>();
-		List<Notice> list = new ArrayList<Notice>();
-		list = teacherDao.loadNotice(courseId);
-		result.setData(list);
-		result.setMsg("加载成功");
-		result.setStatus(1);
-		return result;
-	}
+    public Result<List<Notice>> loadNotice(String courseId) {
+        Result<List<Notice>> result = new Result<List<Notice>>();
+        List<Notice> list = new ArrayList<Notice>();
+        list = teacherDao.loadNotice(courseId);
+        result.setData(list);
+        result.setMsg("加载成功");
+        result.setStatus(1);
+        return result;
+    }
 
 }

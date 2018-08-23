@@ -102,7 +102,7 @@
         </trim>
         where student_id = #{student_id}
     </update>
-    
+
     <!-- 发帖子 -->
     <insert id="sendForum" parameterType="cn.yexin.netclass.pojo.Forum">
     	insert into nc_forum
@@ -120,7 +120,7 @@
     	#{forum_content},
     	#{forum_time})
     </insert>
-    
+
     <!-- 加载帖子 -->
     <select id="loadForum" resultType="cn.yexin.netclass.pojo.Forum">
     	select * from nc_forum

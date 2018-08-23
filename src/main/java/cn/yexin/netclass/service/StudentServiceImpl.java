@@ -158,36 +158,36 @@ public class StudentServiceImpl implements StudentService {
         return result;
     }
 
-	public Result<Integer> sendForum(String courseId, String userId, String title, String content) {
-		Result<Integer> result = new Result<Integer>();
-		Forum forum = new Forum();
-		forum.setForum_id(UUID.randomUUID().toString());
-		forum.setForum_course_id(courseId);
-		forum.setForum_user_id(userId);
-		forum.setForum_title(title);
-		forum.setForum_content(content);
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    public Result<Integer> sendForum(String courseId, String userId, String title, String content) {
+        Result<Integer> result = new Result<Integer>();
+        Forum forum = new Forum();
+        forum.setForum_id(UUID.randomUUID().toString());
+        forum.setForum_course_id(courseId);
+        forum.setForum_user_id(userId);
+        forum.setForum_title(title);
+        forum.setForum_content(content);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = new Date();
         String time = sdf.format(date);
         forum.setForum_time(time);
         int i = studentDao.sendForum(forum);
-        if(i != 1) {
-        	result.setData(0);
-        	result.setMsg("发帖失败");
-        	return result;
+        if (i != 1) {
+            result.setData(0);
+            result.setMsg("发帖失败");
+            return result;
         }
         result.setData(i);
         result.setMsg("发帖成功");
         return result;
-	}
+    }
 
-	public Result<List<Forum>> loadForum(String courseId) {
-		Result<List<Forum>> result = new Result<List<Forum>>();
-		List<Forum> list = new ArrayList<Forum>();
-		list = studentDao.loadForum(courseId);
-		result.setData(list);
-		result.setMsg("加载成功");
-		result.setStatus(1);
-		return result;
-	}
+    public Result<List<Forum>> loadForum(String courseId) {
+        Result<List<Forum>> result = new Result<List<Forum>>();
+        List<Forum> list = new ArrayList<Forum>();
+        list = studentDao.loadForum(courseId);
+        result.setData(list);
+        result.setMsg("加载成功");
+        result.setStatus(1);
+        return result;
+    }
 }

@@ -92,12 +92,12 @@ public class TeacherController {
         result = teacherService.updateMyInfo(teacherId, name, gender, birthday, signature);
         return result;
     }
-    
+
     @RequestMapping("/loadNotice.do")
     @ResponseBody
-    public Result<List<Notice>> loadNotice(String courseId){
-    	Result<List<Notice>> result = new Result<List<Notice>>();
-    	result = teacherService.loadNotice(courseId);
-    	return result;
+    public Result<List<Notice>> loadNotice(String courseId) {
+        Result<List<Notice>> result = new Result<List<Notice>>();
+        result = teacherService.loadNotice(courseId);
+        return result;
     }
 }

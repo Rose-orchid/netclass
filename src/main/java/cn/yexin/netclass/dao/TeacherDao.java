@@ -31,8 +31,9 @@ public interface TeacherDao {
     List<Record> loadMessage(@Param("courseId") String courseId, @Param("teacherId") String teacherId);
 
     int sendMsg(Record record);
+
     //更新公告时向数据库插入一条历史公告
     int insertHistoryNotice(Notice notice);
-    
+
     List<Notice> loadNotice(String courseId);
 }

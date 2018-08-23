@@ -28,8 +28,8 @@ public interface StudentDao {
     int sendMsg(Record record);
 
     List<Record> loadMessage(@Param("courseId") String courseId, @Param("deliverId") String deliverId, @Param("receiverId") String receiverId);
-    
+
     int sendForum(Forum forum);
-    
+
     List<Forum> loadForum(String courseId);
 }

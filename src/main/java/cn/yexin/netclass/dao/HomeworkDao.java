@@ -8,7 +8,9 @@ import cn.yexin.netclass.pojo.Homework;
 
 public interface HomeworkDao {
 
-	int uploadHomework(Homework homework);
-	List<Homework> listHomework(@Param("courseId")String courseId, @Param("studentId")String studentId);
-	List<Homework> listAllHomework(String courseId);
+    int uploadHomework(Homework homework);
+
+    List<Homework> listHomework(@Param("courseId") String courseId, @Param("studentId") String studentId);
+
+    List<Homework> listAllHomework(String courseId);
 }

@@ -27,8 +27,8 @@ public interface StudentService {
     Result<List<Record>> listMessage(String courseId, String studentId, String teacherId);
 
     Result<Integer> updateMyInfo(String studentId, String name, String gender, String birthday, String signature);
-    
-    Result<Integer> sendForum(String courseId,String userId,String title,String content);
-    
+
+    Result<Integer> sendForum(String courseId, String userId, String title, String content);
+
     Result<List<Forum>> loadForum(String courseId);
 }

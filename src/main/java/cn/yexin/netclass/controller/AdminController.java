@@ -20,28 +20,29 @@ public class AdminController {
 
     @RequestMapping("/addTeacher.do")
     @ResponseBody
-    public Result<Integer> addTeacher(String userId, String username, String password){
-        Result<Integer> result = adminService.addTeacher(userId,username,password);
+    public Result<Integer> addTeacher(String userId, String username, String password) {
+        Result<Integer> result = adminService.addTeacher(userId, username, password);
         return result;
     }
 
     @RequestMapping("/listTeacher.do")
     @ResponseBody
-    public Result<List<Teacher>> listTeacher(){
+    public Result<List<Teacher>> listTeacher() {
         Result<List<Teacher>> result = adminService.listTeacher();
         return result;
     }
+
     @RequestMapping("/deleteTeacher.do")
     @ResponseBody
-    public Result<Integer> deleteTeacher(String teacherId){
+    public Result<Integer> deleteTeacher(String teacherId) {
         Result<Integer> result = adminService.deleteTeacher(teacherId);
         return result;
     }
 
     @RequestMapping("/updateTeaPwd.do")
     @ResponseBody
-    public Result<Integer> updateTeaPwd(String teacherId,String password){
-        Result<Integer> result = adminService.updateTeaPwd(teacherId,password);
+    public Result<Integer> updateTeaPwd(String teacherId, String password) {
+        Result<Integer> result = adminService.updateTeaPwd(teacherId, password);
         return result;
     }
 }

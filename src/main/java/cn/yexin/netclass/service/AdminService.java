@@ -9,8 +9,12 @@ import java.util.List;
 public interface AdminService {
 
     public Result<Admin> findAdmin(String adminId, String password);
-    public Result<Integer> addTeacher(String userId,String username,String password);
+
+    public Result<Integer> addTeacher(String userId, String username, String password);
+
     public Result<List<Teacher>> listTeacher();
+
     public Result<Integer> deleteTeacher(String teacherId);
-    public Result<Integer> updateTeaPwd(String teacherId,String password);
+
+    public Result<Integer> updateTeaPwd(String teacherId, String password);
 }

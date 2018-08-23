@@ -94,20 +94,20 @@ public class StudentController {
         result = studentService.updateMyInfo(studentId, name, gender, birthday, signature);
         return result;
     }
-    
+
     @RequestMapping("/sendForum.do")
     @ResponseBody
-    public Result<Integer> sendForum(String courseId,String userId,String title,String content){
-    	Result<Integer> result = new Result<Integer>();
-    	result = studentService.sendForum(courseId, userId, title, content);
-    	return result;
+    public Result<Integer> sendForum(String courseId, String userId, String title, String content) {
+        Result<Integer> result = new Result<Integer>();
+        result = studentService.sendForum(courseId, userId, title, content);
+        return result;
     }
-    
+
     @RequestMapping("/loadForum.do")
     @ResponseBody
-    public Result<List<Forum>> loadForum(String courseId){
-    	Result<List<Forum>> result = new Result<List<Forum>>();
-    	result = studentService.loadForum(courseId);
-    	return result;
+    public Result<List<Forum>> loadForum(String courseId) {
+        Result<List<Forum>> result = new Result<List<Forum>>();
+        result = studentService.loadForum(courseId);
+        return result;
     }
 }
