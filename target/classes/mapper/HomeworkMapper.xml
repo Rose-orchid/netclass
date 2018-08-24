@@ -20,13 +20,13 @@
 			#{homework_time})
 	</insert>
 
-	<select id="listHomework" parameterType="string" resultType="cn.yexin.netclass.pojo.Homework">
+    <select id="listHomework" parameterType="string" resultType="cn.yexin.netclass.pojo.Homework">
 		select * from nc_homework
 		where homework_course_id = #{courseId} and homework_student_id = #{studentId}
 		order by homework_time DESC
 	</select>
 
-	<select id="listAllHomework" parameterType="string" resultType="cn.yexin.netclass.pojo.Homework">
+    <select id="listAllHomework" parameterType="string" resultType="cn.yexin.netclass.pojo.Homework">
 		select * from nc_homework
 		where homework_course_id = #{courseId}
 		order by homework_time DESC

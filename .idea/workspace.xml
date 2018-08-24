@@ -2,118 +2,43 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="netclass:war exploded" />
+      <artifact name="netclass:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd755034-e976-49fe-884f-dceb80781f94" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/netclass_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/netclass_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_37.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_5_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_2_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_2_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Tomcat_lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netclass.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/dao/ChooseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/dao/ChooseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/dao/CoursewareDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/dao/CoursewareDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/dao/HomeworkDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/dao/HomeworkDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/dao/TeacherDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/dao/TeacherDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/pojo/Courseware.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/pojo/Courseware.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/pojo/Forum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/pojo/Forum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/pojo/Homework.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/pojo/Homework.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/pojo/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/pojo/Notice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/CoursewareService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/CoursewareService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/CoursewareServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/CoursewareServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/HomeworkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/HomeworkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/HomeworkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/HomeworkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/TeacherService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/TeacherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/TeacherServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/conf/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conf/spring-mvc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/conf/spring-transaction.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/conf/spring-transaction.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CoursewareMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CoursewareMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/HomeworkMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/HomeworkMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TeacherMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/controller/AdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/controller/FileController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/controller/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/controller/StudentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/controller/TeacherController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/dao/AdminDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/dao/ChooseDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/dao/CoursewareDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/dao/HomeworkDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/dao/StudentDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/dao/TeacherDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/pojo/Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/pojo/Choose.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/pojo/Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/pojo/Courseware.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/pojo/Forum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/pojo/Homework.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/pojo/Notice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/pojo/Record.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/pojo/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/pojo/Teacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/service/AdminService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/service/AdminServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/service/CoursewareService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/service/CoursewareServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/service/HomeworkService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/service/HomeworkServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/service/StudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/service/StudentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/service/TeacherService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/service/TeacherServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yexin/netclass/util/Result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/test/TestBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testDao/TestAdminDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testDao/TestChooseDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testDao/TestCoursewareDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testDao/TestStudentDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testDao/TestTeacherDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testService/TestAdminService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testService/TestCoursewareService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testService/TestStudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testService/TestTeacherService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/basevalue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/basevalue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/conf/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/conf/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/conf/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/conf/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/conf/spring-transaction.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/conf/spring-transaction.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CoursewareMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CoursewareMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/HomeworkMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/HomeworkMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TeacherMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/controller/FileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/dao/CoursewareDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/dao/CoursewareDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/pojo/Courseware.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/pojo/Courseware.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/pojo/Forum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/pojo/Forum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/pojo/Homework.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/pojo/Homework.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/pojo/Notice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/cn/yexin/netclass/pojo/Notice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/conf/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/conf/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/conf/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/conf/spring-mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/conf/spring-transaction.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/conf/spring-transaction.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/mapper/CoursewareMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/mapper/CoursewareMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/mapper/HomeworkMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/mapper/HomeworkMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/mapper/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/mapper/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/classes/mapper/TeacherMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/js/basevalue.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/js/basevalue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/netclass-0.0.1-SNAPSHOT/scripts/login.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,32 +51,45 @@
     <session id="1319314689">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="9" />
+          <entry key="java" value="55" />
+          <entry key="js" value="1" />
+          <entry key="xml" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="34" />
-          <entry key="xml" value="10" />
+          <entry key="class" value="4" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="48" />
+          <entry key="js" value="3" />
+          <entry key="xml" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="55" />
+          <entry key="JavaScript" value="1" />
+          <entry key="XML" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="34" />
-          <entry key="XML" value="10" />
+          <entry key="CLASS" value="4" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="48" />
+          <entry key="JavaScript" value="3" />
+          <entry key="XML" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -160,13 +98,19 @@
   <component name="FileEditorManager">
     <leaf />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/FileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/util/Result.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/AdminService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/AdminServiceImpl.java" />
@@ -189,14 +133,19 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/dao/ChooseDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/TeacherController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/StudentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/conf/spring-transaction.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/conf/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CoursewareMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/HomeworkMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TeacherMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/basevalue.js" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/FileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yexin/netclass/util/myCORSFilter.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -206,11 +155,32 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven\repository" />
+        <option name="mavenHome" value="D:/apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.5.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
-    <option name="height" value="968" />
+    <option name="height" value="970" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -220,19 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="netclass" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netclass" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -300,17 +257,52 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="netclass" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="netclass" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="java-property-utils-1.9.1" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="netclass" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="java-property-utils-1.9.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="java-property-utils-1.9.1.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="netclass" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="java-property-utils-1.9.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="java-property-utils-1.9.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="baseva&#9;FILE&#9;file://D:/github/netclass/src/main/webapp/js/basevalue.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535035848350" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535126393712" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/java-property-utils-1.9.1.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.31609195" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -325,8 +317,9 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.86" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="restart-server" />
+    <configuration name="netclass" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.86" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="netclass:war exploded">
           <settings>
@@ -397,6 +390,9 @@
       </method>
     </configuration>
   </component>
+  <component name="SpringGeneralSettings">
+    <option name="allowAutoConfigurationMode" value="true" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -407,48 +403,60 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535032104134</updated>
-      <workItem from="1535032106941" duration="3539000" />
+      <workItem from="1535032106941" duration="5050000" />
+      <workItem from="1535037936778" duration="1049000" />
+      <workItem from="1535115351256" duration="10086000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3539000" />
+    <option name="totallyTimeSpent" value="16185000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22453083" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22989276" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32907802" />
-      <window_info anchor="bottom" id="Spring" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32907802" />
-      <window_info anchor="bottom" id="Java Enterprise" weight="0.32907802" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.49787235" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.47989276" weight="0.32907802" />
+      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49865952" weight="0.32907802" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.32907802" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.46045578" weight="0.37304965" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32907802" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.47587132" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="CDI" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,9 +477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -503,13 +508,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/HomeworkServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/StudentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -521,9 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-          <folding>
-            <element signature="e#779#788#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -667,30 +662,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/FileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="151" column="57" selection-start-line="151" selection-start-column="57" selection-end-line="151" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/TeacherController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
-          <folding>
-            <element signature="e#944#952#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -701,31 +676,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-aop.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AdminMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -764,6 +718,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yexin/netclass/service/HomeworkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-361">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/netclass.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AdminMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/scripts/login.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/basevalue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="44" lean-forward="true" selection-start-column="44" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399">
+          <caret line="295" column="28" selection-start-line="295" selection-start-column="28" selection-end-line="295" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Desktop/java-property-utils-1.9.1.jar!/com/thetransactioncompany/util/PropertyParseException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Desktop/java-property-utils-1.9.1.jar!/com/thetransactioncompany/util/PropertyConverter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-mybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/conf/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yexin/netclass/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yexin/netclass/util/myCORSFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Desktop/java-property-utils-1.9.1.jar!/com/thetransactioncompany/util/PropertyRetriever.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -783,7 +840,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring</last-edited>
+          <last-edited>Web (netclass)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -823,7 +880,6 @@
             <option name="proportions">
               <list>
                 <option value="0.31609195" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -831,7 +887,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: org.springframework:spring-jdbc:3.2.8.RELEASE</last-edited>
+          <last-edited>java-property-utils-1.9.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

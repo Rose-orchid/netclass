@@ -50,7 +50,7 @@ public class FileController {
             throws IOException {
         // String path =
         // request.getSession().getServletContext().getRealPath("..\\upload");
-        String path = "D:\\upload";
+        String path = "C:\\upload";
         String fileName = file.getOriginalFilename();
         path = path + "\\" + teacherName + "\\" + courseName;
         File dir = new File(path, fileName);
@@ -178,7 +178,7 @@ public class FileController {
         teacherName = new String(teacherName.getBytes("iso8859-1"), "utf-8");
 
         System.out.println(fileName);
-        String filePath = "D:\\upload" + "\\" + teacherName + "\\" + courseName + "\\" + fileName;
+        String filePath = "C:\\upload" + "\\" + teacherName + "\\" + courseName + "\\" + fileName;
         System.out.println(filePath);
         File file = new File(filePath);
         if (file.exists()) {
@@ -242,7 +242,7 @@ public class FileController {
             throws IOException {
         // String path =
         // request.getSession().getServletContext().getRealPath("..\\upload");
-        String path = "D:\\homework";
+        String path = "C:\\homework";
         String fileName = file.getOriginalFilename();
         path = path + "\\" + teacherName + "\\" + courseName;
         File dir = new File(path, fileName);
@@ -293,7 +293,7 @@ public class FileController {
         teacherName = new String(teacherName.getBytes("iso8859-1"), "utf-8");
 
         System.out.println(fileName);
-        String filePath = "D:\\homework" + "\\" + teacherName + "\\" + courseName + "\\" + fileName;
+        String filePath = "C:\\homework" + "\\" + teacherName + "\\" + courseName + "\\" + fileName;
         System.out.println(filePath);
         File file = new File(filePath);
         if (file.exists()) {

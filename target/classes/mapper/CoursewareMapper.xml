@@ -22,7 +22,7 @@
 			#{courseware_time})
 	</insert>
 
-	<select id="listCourseware" parameterType="string" resultType="cn.yexin.netclass.pojo.Courseware">
+    <select id="listCourseware" parameterType="string" resultType="cn.yexin.netclass.pojo.Courseware">
 		select * from nc_courseware
 		where courseware_teacher = #{teacherName} and courseware_course = #{courseName}
 		order by courseware_time DESC

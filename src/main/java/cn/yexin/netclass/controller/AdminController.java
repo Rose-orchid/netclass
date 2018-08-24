@@ -12,6 +12,7 @@ import cn.yexin.netclass.pojo.Teacher;
 import cn.yexin.netclass.service.AdminService;
 import cn.yexin.netclass.util.Result;
 
+
 @Controller
 @RequestMapping("/admin")
 public class AdminController {

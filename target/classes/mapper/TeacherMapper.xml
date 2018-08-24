@@ -69,7 +69,7 @@
         set
         <trim suffixOverrides=",">
             <if test="teacher_name!=null">teacher_name = #{teacher_name},</if>
-			<if test="teacher_password!=null">teacher_password = #{teacher_password},</if>
+            <if test="teacher_password!=null">teacher_password = #{teacher_password},</if>
             <if test="teacher_gender!=null">teacher_gender = #{teacher_gender},</if>
             <if test="teacher_birthday!=null">teacher_birthday = #{teacher_birthday},</if>
             <if test="teacher_signature_line!=null">teacher_signature_line = #{teacher_signature_line}</if>
@@ -107,9 +107,9 @@
 		#{record_message},
 		#{record_time})
 	</insert>
-	
-	<!-- 更新公告时向数据库插入一条历史公告 -->
-	<insert id="insertHistoryNotice" parameterType="cn.yexin.netclass.pojo.Notice">
+
+    <!-- 更新公告时向数据库插入一条历史公告 -->
+    <insert id="insertHistoryNotice" parameterType="cn.yexin.netclass.pojo.Notice">
 	insert into nc_notice
 	(notice_id,
 	notice_course_id,
@@ -121,8 +121,8 @@
 	#{notice_content},
 	#{notice_time})
 	</insert>
-	
-	<!-- 加载公告 -->
+
+    <!-- 加载公告 -->
     <select id="loadNotice" resultType="cn.yexin.netclass.pojo.Notice">
     	select * from nc_notice
     	where notice_course_id = #{courseId}
